@@ -1,0 +1,29 @@
+
+
+.view-main
+  = render "layouts/nav"
+  .view-show
+    .asistente-section
+      .asistente-wrap
+        .label-search Buscar Asistente
+        %table#registro_inscritos
+          %thead
+            %tr
+              %th Subscriber
+          %tbody
+            - @registro_eventos.each do |registro_evento|
+              %td(id="inscrito-#{registro_evento.id}")
+                .asistente-info
+                  = link_to '', registro_evento, :method => :delete, class: "icon icon-close", :data => { :confirm => "¿Seguro que sacar a #{registro_evento.subscriber.nombres} de la lista de inscritos ?" }, remote: true
+                  = image_tag registro_evento.subscriber.profile(:medium), width: "50"
+                  .asistente-content
+                    .info-asistente
+                      %b= registro_evento.subscriber.nombres
+                      %h4= registro_evento.subscriber.email
+                    .edit-asistente
+                      %span
+                        %i.icon.icon-certificado
+                        #certificado= best_in_place registro_evento, :certificado, :as => :checkbox, collection: {'false' => " No ", 'true' => "Si"}, :classes => 'name-edit'
+                      %span
+                        %i.icon.icon-user
+                        #asistencia= best_in_place registro_evento, :certificado, :as => :checkbox, collection: {'false' => "No", 'true' => "Si"}

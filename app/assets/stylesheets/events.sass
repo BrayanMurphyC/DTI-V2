@@ -1,0 +1,606 @@
+.modal
+  display: none
+.cover
+  width: 100%
+  height: 100vh
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat no-repeat
+  display: flex
+  position: relative
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  font-family: 'Open Sans', sans-serif
+  .overlay-header
+    background-color: #282d2f
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+    opacity: .5
+  .titulo
+    color: white
+    position: relative
+    text-transform: uppercase
+    font-size: 50px
+    margin-bottom: 20px
+    text-align: center
+  .fecha
+    margin-bottom: 30px
+    position: relative
+  .is-countdown
+    border: 1px solid rgba(204, 204, 204, 0)
+    background-color: transparent
+    width: 400px
+    .countdown-row
+      display: flex
+      justify-content: center
+    .countdown-section
+      color: white
+      position: relative
+      border: 1px solid white
+      width: 80px
+      padding: 2px
+      background-color: transparent
+      border-radius: 4px
+      margin:
+        left: 5px
+        right: 5px
+
+  .status
+    display: flex
+    justify-content: space-around
+    width: 400px
+    position: relative
+    .add-event
+      background-color: white
+      border-radius: 4px
+      position: absolute
+      justify-content: center
+      display: flex
+      .inscribirse
+        display: -webkit-flex
+        width: 180px
+        display: -ms-flex
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0 4px 2px rgba(0,0,0,0.2)
+        input
+          background-color: transparent
+          border-style: none
+          color: #3C484C
+          font-family: 'Roboto Condensed', sans-serif
+          text-transform: uppercase
+          font-size: 14px
+          padding: 15px
+          cursor: pointer
+          &:active
+            outline: none
+        i
+          color: #3C484C
+          font-size: 20px
+    .remove-event
+      position: absolute
+      display: flex
+      background-color: white
+      border-radius: 4px
+      font-size: 14px
+      width: 180px
+      justify-content: center
+      align-items: center
+      box-shadow: 0 4px 2px rgba(0,0,0,0.15)
+      i
+        color: #3C484C
+        font-size: 20px
+      a
+        background-color: transparent
+        border-style: none
+        color: #3C484C
+        font-family: 'Roboto Condensed', sans-serif
+        text-transform: uppercase
+        padding: 15px
+        cursor: pointer
+        text-decoration: none
+
+
+
+
+.contenido
+  width: 100%
+  display: flex
+  justify-content: center
+  font-family: 'Roboto', sans-serif
+  background-color: white
+  .contenido-wrap
+    order: 1
+    width: 800px
+    .body-event-main
+      width: 100%
+      color: #4B4B4B
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 16px
+      font-weight: normal
+      text-align: justify
+      line-height: 1.8
+      margin-top: 20px
+      p
+        img
+          padding: 10px
+          box-sizing: border-box
+        a
+          color: steelblue
+          text-decoration: none
+    .tags
+      width: 100%
+      display: flex
+      align-items: center
+      margin-top: 10px
+      margin-bottom: 10px
+      .icon-tag
+        margin-right: 10px
+        color: #4B4B4B
+        font-size: 20px
+      p
+        background-color: #e8e8e8
+        color: #4B4B4B
+        margin-right: 10px
+        text-transform: capitalize
+        font-size: 13px
+        padding:
+          top: 8px
+          bottom: 8px
+          left: 15px
+          right: 15px
+        border-radius: 10px
+    .ponentes
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      width: 100%
+      justify-content: center
+      flex-wrap: wrap
+      margin-top: 25px
+      align-items: center
+      #ponentes
+        flex-direction: column
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 20px
+        width: 100%
+        .ponente
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding-top: 10px
+          padding-bottom: 10px
+          border-top: 1px solid #f3f3f3
+          &:first-child
+            border-top: none
+          .wrap-ponente
+            width: 80%
+            .top-ponente
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-between
+              h3
+                text-transform: capitalize
+                color: #141e28
+                letter-spacing: .025em
+
+              .rate-ponente
+                i
+                  font-size: 20px
+            .content-ponente
+              p
+                margin-top: 10px
+                margin-bottom: 0px
+                color: #4e4e4e
+                font-size: 15px
+
+          .img-ponente
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            border-radius: 50%
+            overflow: hidden
+            width: 100px
+            height: 100px
+            margin-right: 5px
+            img
+              filter: grayscale(1) contrast(1.1)
+              z-index: 3
+            &:hover .hover-ponente
+              transform: scale(1)
+            .hover-ponente
+              transition: all ease-in-out .3s
+              width: 100%
+              height: 100%
+              position: absolute
+              border-radius: 2%
+              background-color: rgba(#3C484C, .7)
+              display: flex
+              justify-content: center
+              align-items: center
+              transform: scale(0)
+              z-index: 4
+              i
+                a
+                  text-decoration: none
+                  color: white
+                  font-size: 40px
+
+          h3, small
+            font-family: 'Source Sans Pro', sans-serif
+            margin: 0
+          small
+            color: #3c484c
+            text-transform: capitalize
+      .add-ponente
+        display: -ms-flex
+        display: -webkit-box
+        display: -ms-flexbox
+        background-color: #3c484c
+        display: flex
+        width: 160px
+        cursor: pointer
+        align-items: center
+        padding: 8px
+        justify-content: space-around
+        border-radius: 4px
+        transition: all ease-in-out 0.3s
+        margin-bottom: 20px
+        &:hover
+          background-color: #52b5ad
+        p
+          color: white
+          padding: 2px
+          text-transform: uppercase
+          font-size: 12px
+          font-weight: bolder
+          letter-spacing: 1px
+        i
+          color: white
+          font-size: 25px
+
+  .social-slide
+    order: 0
+    width: 80px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    position: relative
+    .social-slide-wrap
+      margin-top: 20px
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      align-items: center
+      &.sliding
+        position: fixed
+        top: 0
+        margin-top: 10px
+
+      .like-event
+        a
+          text-decoration: none
+          padding: 8px
+          font-size: 25px
+          cursor: pointer
+        a.like
+          color: #4B4B4B
+        a.dislike
+          color: #FF5252
+      .like-score
+        margin-bottom: 10px
+        color: grey
+        font-weight: bold
+      .like-slide
+        margin-bottom: 10px
+        i
+          font-size: 25px
+          color: #777777
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//evento index
+
+.eventos
+  width: calc(100% - 100px)
+  height: 100%
+  margin-left: 100px
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  background-color: #FAFAFA
+  .eventos-wrap
+    width: 1200px
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    .event-list
+      display: flex
+      width: calc(25% - 10px)
+      flex-direction: column
+      margin-top: 10px
+      margin-left: 5px
+      margin-right: 5px
+      box-sizing: border-box
+      position: relative
+      overflow: hidden
+      &:hover
+        .btn_admin
+          margin-top: 0
+      .event-item
+        display: flex
+        align-items: center
+        box-shadow: 0 0 4px 4px rgba(0,0,0,0.02)
+        text-decoration: none
+        margin-bottom: 20px
+        border-radius: 4px
+        overflow: hidden
+        background-color: white
+        flex-direction: column
+        transition: all ease-in-out .4s
+        position: relative
+        background-color: white
+        overflow: hidden
+        &:hover .body-evento
+          margin-top: 0
+        .body-evento
+          font-family: 'Source Sans Pro', sans-serif
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          position: absolute
+          margin-top: -100%
+          background: white
+          transition: all ease-in-out .6s
+          height: 100%
+          width: 100%
+          h2
+            font-size: 15px
+            color: #3E454D
+            text-transform: uppercase
+          .list-info-event
+            display: flex
+            width: 180px
+            margin-top: -10px
+            .list-like
+              text-align: left
+              border: 1px solid rgba(#88929e, .1)
+              width: calc(50% - 4px)
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-around
+              border-radius: 25px
+              margin-left: 2px
+              margin-right: 2px
+              margin-top: 5px
+              p
+                color: #88929e
+                font-size: 11px
+                margin-left: 5px
+          .date-info
+            font-family: 'Source Sans Pro', sans-serif
+            color: #4B4B4B
+            display: flex
+            width: 100%
+            flex-wrap: wrap
+            padding: 10px
+            box-sizing: border-box
+            .date-info-wrap
+              width: 100%
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              .hora-event
+                width: calc(50% - 4px)
+                margin-left: 2px
+                margin-right: 2px
+                &:first-child
+                  width: 70%
+
+
+            .lugar-event, .hora-event
+              width: 100%
+              display: flex
+              justify-content: flex-start
+              align-items: center
+              text-align: left
+              border-radius: 3px
+              border: 1px solid rgba(#88929e, .2)
+              margin-top: 5px
+              p
+                color: #3E454D
+                margin-left: 20px
+                margin-right: 10px
+              i
+                font-size: 20px
+                margin-left: 10px
+
+
+
+        .logo-event
+          width: 100%
+          box-sizing: border-box
+          border: 10px solid white
+          img
+            width: 100%
+            border-radius: 4px
+            filter: contrast(1.6) grayscale(0.05) invert(0.07) saturate(0.9) sepia(0.1)
+      .btn_admin
+        position: absolute
+        background-color: white
+        width: 100px
+        margin-top: -50px
+        border-bottom-right-radius: 4px
+        padding: 8px
+        top: 0
+        left: 0
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        transition: all ease-in-out .5s
+        justify-content: space-around
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+        a
+          text-decoration: none
+          color: #3E454D
+          font-size: 18px
+          transition: all ease-in-out .2s
+          cursor: pointer
+          &:hover
+            color: #4B4B4B
+
+// responsivo para index eventos
+
+@media (max-width: 1400px)
+  .eventos
+    .eventos-wrap
+      width: 900px
+      .event-list
+        width: calc(33.3333% - 10px)
+
+@media (max-width: 1000px)
+  .cover
+    .titulo
+      font-size: 45px
+  .eventos
+    .eventos-wrap
+      width: 700px
+      .event-list
+        width: calc(50% - 10px)
+
+@media (max-width: 940px)
+  .contenido
+    padding: 20px
+    box-sizing: border-box
+    flex-direction: column
+    align-items: center
+    .contenido-wrap
+      width: 100%
+      .body-event-main
+        p
+          img
+            width: 100% !important
+            height: auto !important
+    .social-slide
+      align-self: flex-start
+      width: 100%
+      margin-top: -60px
+      margin-bottom: 10px
+      .social-slide-wrap
+        flex-direction: row
+        align-items: center
+        margin-top: 0
+        .like-event
+          a
+            color: white !important
+        .like-score
+          margin-right: 20px
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-bottom: 0
+          color: white
+
+        .like-slide
+          margin-bottom: 0
+          margin-left: 5px
+          border: 1px solid white
+          border-radius: 50%
+          padding: 4px
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 20px
+          height: 20px
+          i
+            color: white
+            font-size: 20px
+
+
+
+
+@media (max-width: 700px)
+  .cover
+    .titulo
+      font-size: 40px
+
+
+
+@media (max-width: 600px)
+  .eventos
+    .eventos-wrap
+      width: 300px
+      .event-list
+        width: calc(100% - 10px)
+
+@media (max-width: 550px)
+  .contenido
+    .contenido-wrap
+      .ponentes
+        #ponentes
+          .ponente
+            .wrap-ponente
+              width: 50%
+              .top-ponente
+                flex-direction: column
+                h3
+                  font-size: 15px
+              .content-ponente
+                p
+                  display: none
+
+
+
+
+
+@media (max-width: 500px)
+  .cover
+    .is-countdown
+      font-size: 10px
+      .countdown-section
+        width: 60px
+
+  .contenido
+    .contenido-wrap
+      .ponentes
+        #ponentes
+          justify-content: space-between
+          .ponente
+            margin-top: 20px
+
+@media (max-width: 400px)
+  .cover
+    .titulo
+      font-size: 30px

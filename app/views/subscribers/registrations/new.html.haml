@@ -1,0 +1,16 @@
+.sign-in-subscriber.signup-bg-color
+  .sign-in-subscriber-wrap
+    %img(src="/assets/signup.jpg" width="100%")
+    .fields-content
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :dni, required: true, label: "Numero de DNI"
+          = f.input :nombres, required: true, label: "Nombres y Apellidos"
+          = f.input :email, required: true, autofocus: true, label: "Correo Electronico"
+          = f.input :password, required: true, label: "Contraseña", input_html: { id: 'contraseña'}
+          = f.input :password_confirmation, required: true, label: "Confirmar Contraseña"
+
+
+        .form-actions
+          = f.button :submit, "Registrarse"

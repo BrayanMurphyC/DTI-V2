@@ -1,0 +1,19 @@
+- @evento_ponentes.each do |evento_ponente|
+  .ponente(id="ponente-#{evento_ponente.id}")
+    .wrap-ponente
+      .top-ponente
+        %h3= evento_ponente.ponente.nombres
+        .rate-ponente
+          %i.icon.icon-heart
+          %i.icon.icon-heart
+          %i.icon.icon-heart
+          %i.icon.icon-like-o
+          %i.icon.icon-like-o
+      .content-ponente
+        %small= evento_ponente.tema
+        %p= truncate( evento_ponente.ponente.bio, length: 120)
+    .img-ponente
+      - if user_signed_in?
+        .hover-ponente
+          %i.icon= link_to '', evento_ponente, :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true, class: "icon-close"
+      = image_tag evento_ponente.ponente.profile(:medium), width: 100

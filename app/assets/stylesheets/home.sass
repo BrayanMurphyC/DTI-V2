@@ -1,0 +1,902 @@
+
+.btn-white
+  width: 200px
+  background-color: #fff
+  padding: 15px
+  display: -webkit-flex
+  display: -ms-flex
+  border-radius: 3px
+  display: flex
+  justify-content: center
+  a
+    color: #001E29
+    text-decoration: none
+    text-transform: uppercase
+
+
+body
+  margin: auto
+  background-color: #fafafa
+  .content-page
+    background-image: url(/assets/bg.jpg)
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    display: block
+    width: 100%
+    height: 100vh
+    position: fixed
+    overflow: hidden
+    top: 0
+    left: 0
+    .menu
+      position: absolute
+      top: 0
+      right: 0
+      display: none
+    .menu-list
+      transform: scale(2)
+      position: absolute
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      z-index: -2
+      transition: all ease-in-out .3s
+      opacity: 0
+      top: 0
+      right: 0
+
+    .bar-top
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 60px
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .search
+        margin-top: 10px
+        z-index: 11
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        i
+          color: #001E29
+          margin-right: -25px
+          position: relative
+        input
+          width: 250px
+      .sign-in
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        font-family: 'Source Sans Pro', sans-serif
+        .btn-white-logout
+          padding: 8px
+          background-color: transparent
+          border: 1px solid #dc5858
+          border-radius: 2px
+          margin-left: 10px
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          a
+            color: #dc5858
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: .05em
+        .btn-white-sign-in
+          padding: 8px
+          background-color: transparent
+          border: 1px solid white
+          border-radius: 2px
+          margin-left: 10px
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          a
+            color: white
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: .05em
+        .btn-white-sign-up
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 8px
+          background-color: white
+          border-radius: 2px
+          margin-left: 10px
+          a
+            color: #001E29
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: .05em
+
+      input
+        height: 40px
+        padding-left: 35px
+        border-style: none
+        border-radius: 2px
+        font-family: 'Source Sans Pro', sans-serif
+        &:focus, &:active
+          outline: none
+    @media (max-width : 500px)
+
+      .menu-list
+        display: -webkit-flex
+        display: -ms-flex
+        z-index: 20
+        width: 100%
+        flex-direction: column
+        height: 100%
+        background-color: rgba(#001E29, .95)
+        z-index: -1
+
+        &.visible
+          transform: scale(1)
+          opacity: 1
+          z-index: 30
+        span
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          color: white
+          padding: 4px
+          height: 20px
+          border-radius: 2px
+          margin-top: 5px
+          margin-right: 5px
+          cursor: pointer
+          align-self: flex-end
+
+          i
+            font-size: 20px
+
+        ul
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: space-between
+          flex-direction: column
+          align-items: center
+          padding: 0
+          height: 70%
+
+          li
+            list-style: none
+            color: white
+            font-family: 'Source Sans Pro', sans-serif
+            padding: 10px
+            transition: all ease-in-out .3s
+            border: 1px solid transparent
+            border-radius: 2px
+            &:hover
+              border: 1px solid white
+            a
+              color: white
+              text-decoration: none
+              text-transform: capitalize
+
+      .menu
+        display: flex
+        z-index: 12
+        span
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          color: white
+          padding: 4px
+          height: 20px
+          border-radius: 2px
+          margin-top: 5px
+          margin-right: 5px
+          border: 1px solid white
+          cursor: pointer
+          p
+            font-family: 'Source Sans Pro', sans-serif
+            text-transform: uppercase
+            font-size: 13px
+
+      .bar-top
+        display: none
+    .legal
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+      display: flex
+      justify-content: center
+      flex-direction: column
+      span, .extra-contacto
+        color: white
+        font-size: 13px
+        align-items: center
+        width: 100%
+        font-family: 'Source Sans Pro', sans-serif
+        margin-bottom: 10px
+        color: rgba(white, .8)
+        display: flex
+        justify-content: center
+
+    @media (max-height: 670px)
+      .legal
+        display: none
+    @media (max-width : 500px)
+      .legal
+        span, .extra-contacto
+          color: white
+          font-size: 11px
+          text-align: center
+
+
+    .wrap-page
+      width: 100%
+      height: 100%
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .nav
+        width: 120px
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        // position: absolute
+        .wrap-item
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          flex-direction: column
+          margin-left: 18px
+          width: 100%
+          .line-vertical
+            display: block
+            height: 60px
+            width: 1px
+            background-color: rgba(white , .8)
+            margin-left: 7px
+            margin-bottom: -15px
+            margin-top: -15px
+
+          .item
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: space-between
+            width: 100%
+            cursor: pointer
+            align-items: center
+            text-decoration: none
+            &.active
+              span
+                background-color: #fff
+              p
+                color: rgba(white , 1)
+            span
+              transition: all ease-in-out .5s
+              display: block
+              width: 14px
+              height: 14px
+              border-radius: 50%
+              border: 2px solid white
+              box-sizing: border-box
+
+            p
+              width: 85%
+              color: rgba(white , .6)
+              font-family: 'Source Sans Pro', sans-serif
+              text-transform: capitalize
+              font-size: 12px
+              letter-spacing: 1px
+              transition: all ease-in-out .5s
+
+
+      .page-content
+        width: calc(100% - 120px)
+        font-family: 'Source Sans Pro', sans-serif
+        color: white
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        z-index: 10
+        section
+          height: 100vh
+          margin-top: -100vh
+          opacity: 0
+          position: absolute
+          transition: all ease-in-out .8s
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: center
+          align-items: center
+          &.active
+            margin-top: 0
+            opacity: 1
+            z-index: 20
+
+          .main-wrap
+            display: flex
+            flex-direction: column
+            align-items: center
+            .logo
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              .img_profile_main
+                border-radius: 50%
+
+              h3
+                text-transform: uppercase
+                font-size: 18px
+                font-weight: normal
+                text-align: center
+            .btn-ingresar
+              opacity: 0
+              &.active
+                opacity: 1
+                animation: fadeInUp 1.5s
+
+            .link-registrarse
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-between
+              align-items: center
+              opacity: 0
+              &.active
+                opacity: 1
+                animation: fadeInUp 2s
+              p
+                color: white
+              a
+                color: white
+                text-transform: capitalize
+                padding-left: 10px
+            .social-modal
+              width: 100%
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              align-items: center
+              justify-content: space-around
+              &.active i
+                transform: scale(1)
+
+              i
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                border: 1px solid white
+                padding: 5px
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+                transition: all ease-in-out 1s
+                justify-content: center
+                align-items: center
+                transform: scale(0)
+                a
+                  text-decoration: none
+                  color: white
+                  font-size: 30px
+
+          .areas-wrap
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: space-around
+            width: 800px
+            .a1,.a3,.a2
+              opacity: 0
+            .a1,.a3
+              &.active
+                opacity: 1
+                animation: bounceInDown 1s
+            .a2
+              &.active
+                opacity: 1
+                animation: bounceInUp 1s
+            .area
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: center
+              flex-direction: column
+              align-items: center
+              padding: 20px
+              transition: all ease-in-out .5s
+              p
+                text-align: center
+              a
+                width: 80px
+                height: 80px
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 60px
+                color: white
+                text-decoration: none
+                border-radius: 50%
+                border: 2px solid white
+                padding: 30px
+                transition: all ease-in-out .3s
+                &:hover
+                  background-color: rgba(white, .3)
+
+
+          @media (max-width : 900px)
+            .areas-wrap
+              width: 600px
+              .area
+                padding: 5px
+                a
+                  width: 60px
+                  height: 60px
+                  font-size: 40px
+                p
+                  font-size: 12px
+                  margin: 5px
+
+          @media (max-width : 700px)
+            .areas-wrap
+              flex-direction: column
+              .area
+                padding: 5px
+                a
+                  width: 40px
+                  height: 40px
+                  font-size: 30px
+                p
+                  font-size: 12px
+                  margin: 5px
+
+
+
+          .eventos-wrap
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            width: 800px
+            .eventos-list
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-around
+              width: 100%
+              margin-bottom: 20px
+              .evento-content
+                transition: all ease-in-out .5s
+                opacity: 0
+                display: -webkit-flex
+                display: -ms-flex
+
+                &.active
+                  opacity: 1
+                  animation: tada 1s
+                a
+                  display: flex
+                  text-decoration: none
+                  flex-direction: column
+                  img
+                    border-radius: 3px
+                    box-shadow: 0 0 15px 2px rgba(0,0,0,0.2)
+                  p
+                    color: white
+                    display: -webkit-flex
+                    display: -ms-flex
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    small
+                      color: rgba(white , .8)
+
+          @media (max-width : 900px)
+            .eventos-wrap
+              width: 100%
+              .eventos-list
+                flex-direction: column
+                .evento-content
+                  margin-bottom: 10px
+                  a
+                    flex-direction: row
+                    align-items: center
+                    border: 1px solid white
+                    border-radius: 2px
+                    padding: 5px
+
+                    img
+                      width: 120px
+                      height: 80px
+                    p
+                      width: 100%
+                      margin-left: 10px
+
+          @media (max-width : 325px)
+            .eventos-wrap
+              .eventos-list
+                a
+                  p
+                    font-size: 12px
+
+
+          .articulos-wrap
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            width: 800px
+            .articulos-list
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-around
+              width: 100%
+              margin-bottom: 50px
+              .articulos-content
+                background-color: #fff
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                border-radius: 3px
+                overflow: hidden
+                transition: all ease-in-out .5s
+                opacity: 0
+                box-shadow: 0 0 15px 2px rgba(0,0,0,0.2)
+                min-height: 196px
+                &.active
+                  opacity: 1
+                  animation: tada 1s
+
+                &:hover
+                  .articulo-container
+                    .img-articulo
+                      background-color: rgba(#001E29, .7)
+                      margin-top: -8px
+                      z-index: 4
+                      .dark-img
+                        background-color: rgba(#001E29, .5)
+                    .body-articulo
+                      z-index: 5
+                      margin-top: -50px
+                      .text-content
+                        opacity: 1
+
+
+                .articulo-container
+                  width: 220px
+                  display: -webkit-flex
+                  display: -ms-flex
+                  display: flex
+                  flex-direction: column
+                  .img-articulo
+                    width: 100%
+                    height: 120px
+                    background-size: cover
+                    background-position: center center
+                    background-repeat: no-repeat
+                    transition: all ease-in-out .5s
+                    margin-top: 0
+                    position: relative
+                    .dark-img
+                      width: 100%
+                      height: 100%
+                      position: absolute
+                      top: 0
+                      left: 0
+                      transition: all ease-in-out .5s
+                      background-color: rgba(#001E29, 0)
+                  .body-articulo
+                    position: relative
+                    margin-top: 0px
+                    margin-bottom: -80px
+                    background-color: #fff
+                    transition: all ease-in-out .5s
+                    padding: 10px 10px 20px 10px
+                    box-sizing: border-box
+                    a
+                      display: flex
+                      flex-direction: column
+                      text-decoration: none
+                      color: #001E29
+                      // text-transform: uppercase
+                      .triangulo_sup
+                        width: 0
+                        height: 0
+                        border-left: 10px solid transparent
+                        border-right: 10px solid transparent
+                        border-bottom: 12px solid white
+                        margin-top: -20px
+                        z-index: 5
+                      b
+                        text-transform: uppercase
+                        font-size: 14px
+                        font-weight: normal
+                        padding-top: 5px
+                      small
+                        color: rgba(#001E29, .7)
+                        text-transform: uppercase
+                        font-size: 11px
+                      .text-content
+                        font-size: 12px
+                        text-align: justify
+                        color: #001E29
+                        opacity: 0
+                        transition: all ease-in-out .8s
+
+                .info-articulo
+                  display: block
+                  z-index: 6
+                  display: -webkit-flex
+                  display: -ms-flex
+                  background-color: #fff
+                  display: flex
+                  width: 100%
+                  .stats
+                    display: -webkit-flex
+                    display: -ms-flex
+                    display: flex
+                    justify-content: space-around
+                    align-items: center
+                    margin-right: 10px
+                    p
+                      color: rgba(#001E29, .5)
+                      margin: 5px
+                      font-size: 14px
+
+          @media (max-width : 900px)
+            .articulos-wrap
+              width: 100%
+              .articulos-list
+                flex-direction: column
+                margin-bottom: 5px
+                .articulos-content
+                  margin-bottom: 15px
+                  min-height: 110px
+                  .articulo-container
+                    width: 230px
+                    .img-articulo
+                      margin-top: -8px
+                    .body-articulo
+                      margin-top: -50px
+                      .text-content
+                        display: none
+                  .info-articulo
+                    display: none
+
+
+
+          .documento-wrap
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            width: 800px
+            .documento-list
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: space-around
+              width: 100%
+              margin-bottom: 50px
+
+              .documento-content
+                padding: 10px
+                box-sizing: border-box
+                width: 150px
+                background-color: #fff
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+                border-radius: 3px
+                flex-direction: column
+                color: #001E29
+                transition: all ease-in-out .5s
+                box-shadow: 0 0 15px 2px rgba(0,0,0,0.2)
+                opacity: 0
+                &.active
+                  opacity: 1
+                  animation: tada 1s
+                .download
+                  display: -webkit-flex
+                  display: -ms-flex
+                  display: flex
+                  justify-content: space-between
+                  align-items: center
+                  small
+                    width: 50px
+                    text-align: center
+                    background-color: #001E29
+                    padding: 2px
+                    color: white
+                    text-transform: uppercase
+                    border-radius: 2px
+                  a
+                    text-decoration: none
+                    color: #001E29
+                    font-size: 30px
+
+                h2
+                  font-size: 14px
+                span
+                  font-size: 12px
+                  text-align: justify
+
+          @media (max-width : 900px)
+            .documento-wrap
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              justify-content: center
+              flex-direction: column
+              align-items: center
+              width: 100%
+              .documento-list
+                flex-direction: column
+                width: 100%
+                margin-bottom: 5px
+
+                .documento-content
+                  width: 100%
+                  margin-bottom: 15px
+                  h2
+                    margin: 0
+                  span
+                    display: none
+          .contacto-wrap
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            width: 800px
+            .form-contact
+              display: -webkit-flex
+              display: -ms-flex
+              display: flex
+              flex-direction: column
+              align-items: center
+              color: white
+              input[type="text"]
+                width: 350px
+                height: 50px
+                background-color: rgba(white, .2)
+                border: 1px solid white
+                color: white
+                border-radius: 2px
+                margin-bottom: 10px
+                padding: 10px
+                box-sizing: border-box
+                font-family: 'Source Sans Pro', sans-serif
+                opacity: 0
+                &:focus, &:active
+                  outline: none
+                &.active
+                  opacity: 1
+                  animation: bounceInLeft 1s
+
+
+              *::-webkit-input-placeholder
+                color: white
+              input[type="submit"]
+                width: 200px
+                height: 45px
+                background-color: white
+                color: #001E29
+                border-style: none
+                text-transform: uppercase
+                border-radius: 4px
+                font-family: 'Source Sans Pro', sans-serif
+                opacity: 0
+                &:focus, &:active
+                  outline: none
+                &.active
+                  opacity: 1
+                  animation: bounceInUp 1s
+
+              textarea
+                width: 350px
+                height: 100px
+                background-color: rgba(white, .2)
+                border: 1px solid white
+                border-radius: 2px
+                padding: 10px
+                box-sizing: border-box
+                color: white
+                margin-bottom: 20px
+                font-family: 'Source Sans Pro', sans-serif
+                opacity: 0
+                &:focus, &:active
+                  outline: none
+                &.active
+                  opacity: 1
+                  animation: bounceInRight 1s
+
+        @media (max-width : 450px)
+          .contacto-section
+            width: 250px
+            .contacto-wrap
+              width: 100%
+              .form-contact
+                width: 100%
+                input[type="text"],input[type="submit"], textarea
+                  width: 100%
+
+    @media (max-width : 500px)
+      .wrap-page
+        flex-direction: column
+        height: 100%
+        .nav
+          flex-direction: row
+          justify-content: center
+          margin-top: 65px
+          position: relative
+          z-index: 12
+          .wrap-item
+            a
+              p
+                display: none
+            .line-vertical
+              display: none
+        .page-content
+          height: 90%
+
+
+
+  .hide-content > div
+    width: 100%
+    height: 400px
+    // opacity: .8
+  // #hide-main
+  //   background-color: #fff
+  // #hide-areas
+  //   background-color: red
+  // #hide-eventos
+  //   background-color: #fff
+  // #hide-articulos
+  //   background-color: green
+  // #hide-documentos
+  //   background-color: tomato
+  // #hide-contacto
+  //   background-color: #fff
+    // background-color: red

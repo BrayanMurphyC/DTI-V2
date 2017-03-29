@@ -1,0 +1,447 @@
+
+.articulo-section
+  display: flex
+  justify-content: center
+  width: 100%
+  background-color: white
+  .articulo-wrap
+    padding: 10px
+    width: 800px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    order: 1
+    .comentario-articulo
+      width: 100%
+    .info
+      width: 100%
+      box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+      background-color: #fff
+      padding: 10px
+      border-radius: 4px
+      box-sizing: border-box
+      display: -webkit-flex
+      display: -ms-flex
+      color: #4B4B4B
+      display: flex
+      justify-content: space-between
+      display: none
+      font.like-event
+        a
+          text-decoration: none
+          padding: 8px
+          border-radius: 3px
+          font-size: 16px
+          cursor: pointer
+        a.like
+          color: #4B4B4B
+          border: 1px solid #4B4B4B
+        a.dislike
+          color: #FF5252
+          border: 1px solid #FF5252
+      font
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        font-size: 15px
+        align-items: center
+        color: #4B4B4B
+        font-family: 'Source Sans Pro', sans-serif
+        i
+          font-size: 20px
+          margin-right: 10px
+    .articulo-title
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: left
+      width: 100%
+      h1
+        text-transform: capitalize
+        font-size: 40px
+        color: #4B4B4B
+        margin-bottom: 0
+        margin-left: 0
+        margin-top: 10px
+        font-family: 'Source Sans Pro', sans-serif
+      h2
+        margin: 3px
+        font-size: 14px
+        color: #b5b5b5
+        text-transform: uppercase
+        font-family: 'Source Sans Pro', sans-serif
+        letter-spacing: 1px
+
+      em
+        margin-top: -20px
+        font-size: 13px
+    .articulo-cover
+      img
+        width: 100%
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+        border-radius: 3px
+    .articulo-body
+      width: 100%
+      color: #4B4B4B
+      font-family: 'Source Sans Pro', sans-serif
+      font-weight: normal
+      text-align: justify
+      line-height: 1.8
+      font-size: 16px
+    .articulo-tags
+      width: 100%
+      display: flex
+      align-items: center
+      margin-top: 10px
+      margin-bottom: 10px
+      .icon-tag
+        margin-right: 10px
+        color: #4B4B4B
+        font-size: 20px
+      p
+        background-color: #e8e8e8
+        color: #4B4B4B
+        margin-right: 10px
+        text-transform: capitalize
+        font-size: 13px
+        padding:
+          top: 8px
+          bottom: 8px
+          left: 15px
+          right: 15px
+        border-radius: 10px
+
+  .social-slide
+    order: 0
+    width: 80px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    position: relative
+    .social-slide-wrap-a
+      margin-top: 10px
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      align-items: center
+      &.sliding
+        position: fixed
+        top: 0
+        margin-top: 10px
+
+      .like-event
+        a
+          text-decoration: none
+          padding: 8px
+          font-size: 25px
+          cursor: pointer
+        a.like
+          color: #4B4B4B
+        a.dislike
+          color: #FF5252
+
+      .like-score
+        font-family: 'Roboto', sans-serif
+        margin-bottom: 10px
+        color: grey
+        font-weight: bold
+      .like-slide
+        margin-bottom: 10px
+        i
+          font-size: 25px
+          color: #777777
+
+.sugeridos
+  margin-top: 50px
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  .wrap-sugeridos
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    width: 100%
+    .articulo-sugerido
+      width: 50%
+      height: 400px
+      position: relative
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      color: white
+      font-family: 'Source Sans Pro', sans-serif
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat no-repeat
+      &:hover .dark-sugeridos
+        background-color: rgba(29, 33, 35, 0.9)
+      .dark-sugeridos
+        position: absolute
+        transition: all ease-in-out .3s
+        width: 100%
+        height: 100%
+        background-color: rgba(29, 33, 35, 0.7)
+
+      h2,p,a
+        position: relative
+        margin: 5px
+      p
+        font-size: 12px
+        text-transform: uppercase
+      a
+        padding-top: 4px
+        padding-bottom: 4px
+        padding-left: 6px
+        padding-right: 6px
+        color: white
+        text-decoration: none
+        border: 1px solid white
+        font-size: 13px
+        text-transform: uppercase
+        border-radius: 2px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//articulos index
+.articulo-content
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 100%
+  background-color: #fafafa
+  .articulos-list
+    width: 1200px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    .articulos-content
+      background-color: #fff
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      border-radius: 3px
+      overflow: hidden
+      margin: 10px
+      transition: all ease-in-out .5s
+      font-family: 'Source Sans Pro', sans-serif
+      min-height: 231px
+      // opacity: 0
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.02)
+      &.active
+        opacity: 1
+        animation: tada 1s
+
+      &:hover
+        .articulo-container
+          .img-articulo
+            background-color: rgba(#001E29, .7)
+            margin-top: -8px
+            z-index: 4
+            .dark-img
+              background-color: rgba(#001E29, .5)
+          .body-articulo
+            z-index: 5
+            margin-top: -50px
+            .text-content
+              opacity: 1
+
+
+      .articulo-container
+        width: 280px
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        .img-articulo
+          width: 100%
+          height: 150px
+          background-size: cover
+          background-position: center center
+          background-repeat: no-repeat
+          transition: all ease-in-out .5s
+          margin-top: 0
+          position: relative
+          .dark-img
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            transition: all ease-in-out .5s
+            background-color: rgba(#001E29, 0)
+        .body-articulo
+          position: relative
+          margin-top: 0px
+          margin-bottom: -60px
+          background-color: #fff
+          transition: all ease-in-out .5s
+          padding: 10px 10px 20px 10px
+          box-sizing: border-box
+          a
+            display: flex
+            flex-direction: column
+            text-decoration: none
+            color: #001E29
+            // text-transform: uppercase
+            .triangulo_sup
+              width: 0
+              height: 0
+              border-left: 10px solid transparent
+              border-right: 10px solid transparent
+              border-bottom: 12px solid white
+              margin-top: -20px
+              z-index: 5
+            b
+              text-transform: uppercase
+              font-size: 14px
+              font-weight: normal
+              padding-top: 5px
+            small
+              color: rgba(#001E29, .7)
+              text-transform: uppercase
+              font-size: 11px
+            .text-content
+              font-size: 12px
+              text-align: justify
+              color: #001E29
+              opacity: 0
+              transition: all ease-in-out .8s
+
+      .info-articulo
+        display: block
+        z-index: 6
+        display: -webkit-flex
+        display: -ms-flex
+        background-color: #fff
+        display: flex
+        width: 100%
+        .stats
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: space-around
+          align-items: center
+          margin-right: 10px
+          p
+            color: rgba(#001E29, .5)
+            margin: 5px
+            font-size: 14px
+
+
+@media (max-width : 1200px)
+  .articulo-content
+    .articulos-list
+      width: 900px
+
+
+
+
+@media (max-width : 940px)
+  .articulo-section
+    flex-direction: column
+    .articulo-wrap
+      padding: 20px
+      width: 100%
+      box-sizing: border-box
+      .comentario-articulo
+        width: 100%
+      .articulo-title
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: left
+        width: 100%
+
+      .articulo-body
+        p
+          img
+            width: 100% !important
+            height: auto !important
+            margin: 0 !important
+
+    .social-slide
+      width: 100%
+      .social-slide-wrap-a
+        flex-direction: row
+        .like-event
+          a
+            padding: 0
+          a.like
+            color: #4B4B4B
+          a.dislike
+            color: #FF5252
+
+        .like-score
+          font-family: 'Roboto', sans-serif
+          margin-bottom: 0px
+          color: grey
+          font-weight: bold
+          margin-right: 10px
+        .like-slide
+          margin-bottom: 0px
+          margin-right: 5px
+
+  .sugeridos
+    .wrap-sugeridos
+      flex-direction: column
+      width: 100%
+      .articulo-sugerido
+        width: 100%
+        height: 250px
+
+@media (max-width : 900px)
+  .articulo-content
+    .articulos-list
+      width: 600px
+
+@media (max-width : 600px)
+  .articulo-content
+    .articulos-list
+      width: 300px
+
+
+
+// @media (max-width : 900px)
+//   .articulo-content
+//     .articulos-list
+//       width: 100%
+//
+// @media (max-width : 720px)
+//   .articulo-content
+//     .articulos-list
+//       width: 100%
+//       .articulo-item
+//         width: calc(50% - 10px)
+//
+// @media (max-width : 500px)
+//   .articulo-content
+//     .articulos-list
+//       width: 100%
+//       .articulo-item
+//         margin-left: 10px
+//         width: calc(100% - 20px)

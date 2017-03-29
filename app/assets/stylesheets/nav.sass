@@ -1,0 +1,176 @@
+.view-show
+  width: calc(100% - 120px)
+  margin-left: 100px
+  overflow: hidden
+  background-color: #fafafa
+  h1
+    font-family: 'Roboto Condensed', sans-serif
+    color: #4B4B4B
+
+.view-main
+  display: flex
+  position: relative
+  height: 100%
+  #menu
+    display: none
+  .header-section
+    width: 120px
+    height: 100vh
+    position: fixed
+    display: flex
+    left: 0
+    z-index: 50
+    transition: all 0.5s cubic-bezier(0.77, 0.02, 0.36, 0.96)
+    .icon-menu
+      font-family: 'Source Sans Pro', sans-serif !important
+      font-size: 30px
+      position: absolute
+      margin-top: 10px
+      left: 120px
+      cursor: pointer
+      color: white
+      background-color: #161819
+      display: flex !important
+      width: 70px
+      font-size: 14px
+      padding: 10px
+      justify-content: space-around
+      align-items: center
+      transition: width ease-in-out .3s
+      margin-right: -35px
+      border-top-right-radius: 4px
+      border-bottom-right-radius: 4px
+      border-top-left-radius: 4px
+      border-bottom-left-radius: 4px
+      margin-left: 5px
+      .icon-close
+        display: none
+
+      // display: none
+    .header-nav
+      height: 100%
+      background-color: #161819
+      width: 100%
+      position: relative
+      box-shadow: 0px 0px 8px 4px rgba(0,0,0,.1)
+      .logo-wraper
+        background-color: #161819
+        height: 100px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        .profile-nav
+          position: relative
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          flex-direction: column
+          a
+            img
+              border: 2px solid white
+              border-radius: 50%
+          .profile-name
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: flex-end
+            flex-direction: column
+            p
+              color: white
+              font-family: 'Open Sans', sans-serif
+              font-size: 11px
+              text-transform: uppercase
+              font-weight: normal
+
+        .logo
+          transform: scale(.8)
+          width: 100%
+          height: 70px
+          background:
+            image: url(logo.png)
+            repeat: no-repeat
+            size: contain
+            position: center
+      .items
+        position: relative
+        ul
+          text-align: right
+          padding: 0
+          margin-top: 0px
+          margin-bottom: 0px
+          li
+            display: flex
+            justify-content: space-around
+            align-items: center
+            box-sizing: border-box
+            flex-direction: column
+            transition: all ease-in-out .3s
+            // border-bottom: 1px solid rgba(#00a799, .05)
+            color: white
+            font-family: 'Open Sans', sans-serif
+            width: 100%
+            &:hover
+              background-color: #1c1f21
+              i
+                color: white
+              a
+                color: white
+            // &:first-child
+            //   border-top: 1px solid rgba(#00a799, .05)
+            i
+              font-size: 20px
+              margin-top: 20px
+            a
+              padding:
+                bottom: 10px
+                top: 10px
+              color: white
+              text-decoration: none
+              position: relative
+              display: flex
+              cursor: pointer
+              justify-content: center
+              align-items: center
+              text-transform: capitalize
+              font-size: 10px
+              text-transform: uppercase
+              font-weight: normal
+              height: 100%
+              width: 80%
+              text-align: center
+
+      .copyright
+        display: block
+        font-size: 11px
+        opacity: 0
+
+@media (max-width: 3000px)
+  .view-main
+    .header-section
+      left: -120px
+      .icon-menu
+        display: block
+
+
+
+    #menu
+      display: none
+      &:checked + .header-section
+        left: 0
+        .icon-menu
+          display: block
+          width: 30px
+          margin-left: 0
+          border-top-left-radius: 0px
+          border-bottom-left-radius: 0px
+          span
+            display: none
+          .icon-menu3
+            display: none
+          .icon-close
+            display: block
+
+    .eventos, .view-show
+      width: 100%
+      margin-left: 0px

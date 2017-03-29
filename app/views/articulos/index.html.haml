@@ -1,0 +1,43 @@
+- content_for :menu do
+  %li
+    = link_to 'Nuevo Articulo', new_articulo_path
+%style
+  body{height: 100%; margin: 0;}
+.view-main
+  = render "layouts/nav"
+  .view-show
+    .articulo-content
+      .articulos-list#articulos-list
+        - @articulos.each do |a|
+          .articulos-content
+            .articulo-container
+              .img-articulo{ :style => "background-image: url('#{a.cover_article.url(:medium)}');"}
+                .dark-img
+              .body-articulo
+                = link_to a, :action => 'show', method: :get do
+                  .triangulo_sup
+                  %b= truncate(a.title, length: 25)
+                  %small= l(a.created_at , format: :short_year)
+                  .text-content= raw a.body.truncate(100)
+            .info-articulo
+              .stats
+                %p.icons-date.icon.icon-heart
+                %p= a.score
+              .stats
+                %p.icons-date.icon.icon-view
+                %p= a.visitas
+          -# .articulo-item
+          -#   .articulo-titulo
+          -#     = articulo.title
+          -#   .articulo-posted
+          -#     = l(articulo.created_at , format: :short_year)
+          -#   -# .articulo-cuerpo= markdown truncate( articulo.body , length: rand(200 .. 400))
+          -#   .articulo-cuerpo= raw articulo.body.truncate(200)
+          -#   .read-more
+          -#     = link_to articulo, :action => 'show', class: "event-item", method: :get  do
+          -#       %p Leer Articulo
+          -#       %i.icon.icon-arrow-right
+          -#   - if user_signed_in?
+          -#     .link_admin_article
+          -#       %td= link_to '', edit_articulo_path(articulo),class: "icon icon-edit"
+          -#       %td= link_to '', articulo,class: "icon icon-close", :method => :delete, :data => { :confirm => 'Are you sure?' }

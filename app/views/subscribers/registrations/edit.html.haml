@@ -1,0 +1,78 @@
+- content_for :profile_menu do
+  %li
+    = link_to 'Mis Eventos', "/perfil/eventos"
+.view-main
+  = render "layouts/nav"
+  .view-show
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = f.error_notification
+      .form-subscriber
+        .form-subscriber-wraper
+
+          .top-form-subscriber
+            .field-image
+              .load-images
+                .images
+                  #upload-img
+                    .file.fileUpload
+                      = f.file_field :profile , label: false, onChange: 'previewFile4()'
+                    %button
+                      %i.icon.icon-photo
+                = form_profile_select(current_subscriber)
+
+            .basic-form-subscriber
+              = f.input :email, autofocus: true, label: "Correo Electronico"
+              = f.input :password, autocomplete: "off", label: "Contraseña"
+              = f.input :password_confirmation, label: "Nueva Contraseña"
+
+          = f.input :dni, label: "Numero de DNI"
+          = f.input :nombres, label: "Nombres y Apellidos"
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            %p
+              Currently waiting confirmation for: #{resource.unconfirmed_email}
+
+          = f.input :titulo, label: "Titulo Profesional"
+          = f.input :institucion, label: "Institución"
+          = f.input :empresa, label: "Empresa"
+          = f.input :area, label: "Area"
+          = f.input :cargo, label: "Cargo que ocupa"
+          = f.input :bio, label: "Biografía"
+          = f.input :telefono, label: "Número de teléfono"
+          = f.input :pais, label: "Pais"
+          = f.input :departamento, label: "Departamento"
+          = f.input :provincia, label: "Provincia"
+          = f.input :localizacion, label: "Localización", placeholder: "Ej: HUANUCO - PERU"
+          .input.form-select
+            %label Seleccione Sexo
+          = f.label :sexo, "Masculino", :value => true
+          = f.radio_button :sexo, true
+
+          = f.label :sexo, "Femenino", :value => false
+          = f.radio_button :sexo, false
+          .input.form-select
+            %label Fecha de Nacimiento
+          = f.date_field :nacimiento, label: "Fecha Nacimiento"
+          = f.input :facebook, label: "Facebook" , placeholder: "Añadir link"
+          = f.input :twiter, label: "Twiter", placeholder: "Añadir link"
+          = f.input :sitio, label: "Sitio Web", placeholder: "Añadir link"
+
+
+          .btn#btn-confirm Guargar Cambios
+
+      .modal#modal-confirm
+        .modal-wrap
+          .sus-form
+            .sus-close
+              %i.icon.icon-cancel
+            .form-content.form-content-main.form-confirm
+              .bg-ingresar.bg-confirm
+                %img(src="/assets/confirm-img.jpg" width="80%")
+              .fields
+                = f.input :current_password, required: true, label: "Contraseña", class: "pass-confirm"
+                .form-actions
+                  = f.button :submit, "Guargar Cambios" , class: "btn"
+                .info-modal Ingrese su contraseña actual para guardar cambios
+
+
+    %p
+      #{link_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "¿Estas seguro de cancelar tu cuenta?" }, method: :delete}

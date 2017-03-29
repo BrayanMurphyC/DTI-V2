@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ * require dataTables/jquery.dataTables
+ *
+ *= require select2
+ *= require_tree .
+ *= require_self
+ *= require jquery.countdown
+ */
+
+ ::-webkit-scrollbar {
+     width: 0px;  /* remove scrollbar space */
+     background: transparent;  /* optional: just make scrollbar invisible */
+ }
+
+ html {overflow: -moz-scrollbars-none;}
+
+.ErrorValidation{
+  border-bottom: 2px solid #e86060 !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.Validation{
+  border-bottom: 2px solid #16B66A !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.subscriber_password_confirmation , .subscriber_password{
+  position: relative;
+}
+
+.subscriber_password_confirmation i , .subscriber_password i{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 20px;
+}
+
+.subscriber_password_confirmation #icon_error , .subscriber_password #icon_error2{
+  color: #e86060;
+}
+
+.subscriber_password_confirmation #icon_validation , .subscriber_password #icon_validation2{
+  color: #16B66A;
+}
+
+.modal-asistencia{
+  top: 0;
+  left: 0;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 37, 46, 0.66);
+  opacity: 0;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: -1;
+  transition: all ease-in-out .6s;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: "Roboto Condensed", sans-serif; }
+  .modal.showModal {
+    opacity: 1;
+    z-index: 55;
+    -webkit-animation: fadeIn .6s;
+            animation: fadeIn .6s;
+          }
+  .modal .sus-form{
+    background-color: white;
+    padding: 10px;
+  }
+
+  .modal .modal-wrap.showModal {
+    -webkit-animation: bounceIn .8s;
+            animation: bounceIn .8s;
+          }
+
+  .modal .modal-wrap.hideModal {
+    -webkit-animation: bounceIn .8s;
+            animation: bounceIn .8s;
+          }
+
+  .modal.hideModal {
+    opacity: 0;
+    -webkit-animation: fadeOut .5s;
+            animation: fadeOut .5s;
+          }
+
+
+
+/*ESTILO ORDENADO BOTONES REDES SOCIALES*/
+nav.share {display:inline-block;} /* shareable's nav tag */
+nav.share div {float:left;}
+nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium sized buttons */
+#___plusone_0 {font-size: default !important;}
+.fb_iframe_widget span { vertical-align: top; }
+.fb_edge_widget_with_comment { vertical-align: top;}
+.fb-like{display:inline-block}
+* html .fb-like{display:inline}/* ie6 inline block fix*/
+*+html .fb-like{display:inline}/* ie7 inline block fix*/

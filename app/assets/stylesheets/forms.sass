@@ -1,0 +1,169 @@
+html
+  width: 100%
+  .form-content
+    width: 100%
+    display: flex
+    justify-content: center
+    .form-wrap
+      width: 800px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      padding: 20px
+      .field-image
+        display: flex
+        width: 100%
+        justify-content: space-around
+        // align-items: center
+        flex-direction: column
+        .load-images
+          width: 300px
+          position: relative
+          display: flex
+          justify-content: center
+          align-items: center
+          border-radius: 5px
+          overflow: hidden
+          margin-bottom: 30px
+          box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.01)
+
+          img
+            width: 100%
+          .images
+            position: absolute
+            bottom: 0
+            left: 0
+            #upload-img
+              position: relative
+              transition: all ease-in-out .2s
+              .file
+                opacity: 0
+                position: absolute
+                top: 0
+                z-index: 2
+                width: 100%
+                height: 100%
+                input
+                  cursor: pointer
+                  width: 100%
+                  height: 40px
+              button
+                background-color: white
+                font-family: "Roboto Condensed", sans-serif
+                border: none
+                display: -webkit-flex
+                display: -ms-flex
+                display: flex
+                align-items: center
+                box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.025)
+                margin: 4px
+                border-radius: 5px
+                color: #3E454D
+                position: relative
+                cursor: pointer
+                top: 0
+                z-index: 1
+                text-transform: uppercase
+                box-sizing: border-box
+                i
+                  margin-right: 5px
+                  font-size: 30px
+
+
+      .field-form
+        width: 100%
+        margin-top: 10px
+        margin-bottom: 10px
+        position: relative
+        .responsive-img
+          width: 100%
+        .n-tag
+          margin-top: 20px
+        input.string, textarea, .n-tag
+          width: 100%
+          font-family: 'Roboto Condensed', sans-serif
+          color: #4B4B4B
+          background-color: white
+          font-size: 16px
+          box-sizing: border-box
+          &:focus, &:active
+            outline: none
+
+        input.string
+          width: 100%
+          font-family: 'Roboto Condensed', sans-serif
+          color: #4B4B4B
+          background-color: white
+          font-size: 16px
+          box-sizing: border-box
+          border-style: none
+          height: 50px
+          border: 2px solid rgba(220, 220, 220, 0.3)
+          border-radius: 5px
+          box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.01)
+          padding-top: 10px
+          padding-bottom: 10px
+          padding-left: 20px
+          padding-right: 20px
+          box-sizing: border-box
+          transform: scale(1)
+          transition: all ease-in-out .3s
+          &:focus, &:active
+            outline: none
+            transform: scale(1.02)
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.015)
+        textarea
+          border-radius: 3px
+          padding: 10px
+          height: 400px
+          border: 2px solid rgba(#4B4B4B, .3)
+          resize: none
+          &:focus, &:active
+            border: 2px solid #00a799
+
+    .btn-guardar
+      width: 100%
+    .btn
+      background-color: #00a799
+      padding: 10px
+      font-size: 15px
+      color: white
+      font-family: "Roboto Condensed", sans-serif
+      border-style: none
+      border-radius: 3px
+      width: 100%
+    select.datetime
+      font-family: "Roboto Condensed", sans-serif
+      font-size: 15px
+      padding: 10px
+      border-radius: 3px
+      border-style: none
+      color: #4B4B4B
+      background-color: white
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.01)
+      &:focus, &:active
+        outline: none
+        transform: scale(1.02)
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.015)
+      option
+        background: white
+        color: #4B4B4B
+
+
+
+    .chip
+      background-color: #e8e8e8
+      padding: 10px
+      border-radius: 50px
+      font-size: 12px
+      text-transform: capitalize
+      font-family: "Roboto Condensed", sans-serif
+
+    .material-icons
+      color: gray
+      font-style: normal
+      padding: 2px
+      font-size: 14px
+      cursor: pointer
+      padding-left: 4px
